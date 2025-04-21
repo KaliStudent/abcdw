@@ -42,7 +42,7 @@
         body: JSON.stringify({ url })
       });
       const data = await res.json();
-      document.getElementById('result').innerHTML = `<p>Shortened URL: <a href="\${data.shortUrl}" target="_blank" class="blue-text text-lighten-3">\${data.shortUrl}</a></p>`;
+      document.getElementById('result').innerHTML = `<p>Shortened URL: <a href="${data.shortUrl}" target="_blank" class="blue-text text-lighten-3">${data.shortUrl}</a></p>`;
     });
   </script>
 
