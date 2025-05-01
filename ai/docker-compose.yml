@@ -1,0 +1,25 @@
+yamlversion: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongo:27017/linkshortener
+      - JWT_SECRET=your_jwt_secret
+      - JWT_EXPIRE=30d
+      - JWT_COOKIE_EXPIRE=30
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4.4
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongo-data:
