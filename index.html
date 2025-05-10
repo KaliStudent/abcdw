@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="google-adsense-account" content="ca-pub-9090611700619794">
+ 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable = "no"/>
   <title>SmartLink • abcw.xyz</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,18 +12,8 @@
   <link href="/css/framework.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
   <script src="/js/framework.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9090611700619794"
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9090611700619794"
      crossorigin="anonymous"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T81RSE23Z3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T81RSE23Z3');
-</script>
-<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 </head>
 <body class="blue-grey darken-4">
   <div class="container center-align" style="margin-top: 10vh;">
@@ -43,31 +34,14 @@
           </button>
         </form>
         <div id="result" class="white-text" style="margin-top: 20px;"></div>
+          <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"></script>
+
       </div>
     </div
-<amp-ad width="100vw" height="320"
-     type="adsense"
-     data-ad-client="ca-pub-9090611700619794"
-     data-ad-slot="6664076690"
-     data-auto-format="rspv"
-     data-full-width="">
-  <div overflow=""></div>
-</amp-ad>>
+
   </div>
 <footer>
-  <script>
-    document.getElementById('shortenForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const url = document.getElementById('urlInput').value;
-      const res = await fetch('/api/shorten', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url })
-      });
-      const data = await res.json();
-      document.getElementById('result').innerHTML = `<p>Shortened URL: <a href="${data.shortUrl}" target="_blank" class="blue-text text-lighten-3">${data.shortUrl}</a></p>`;
-    });
-  </script>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"></script>
 </footer>
